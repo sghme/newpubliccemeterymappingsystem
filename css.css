@@ -1,0 +1,20 @@
+body{
+    background-color:#ffffffd9, #a8ccea;
+    background: url(img/blue.jfif);
+}
+<?php
+require_once 'include/initialize.php';
+
+
+@session_start();
+
+// 2. Unset all the session variables
+unset( $_SESSION['id'] );
+unset( $_SESSION['username'] );
+unset( $_SESSION['email'] );
+unset( $_SESSION['password'] );
+
+// 4. Destroy the session
+// session_destroy();
+redirect(web_root."index.php");
+?>
